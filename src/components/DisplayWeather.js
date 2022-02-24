@@ -8,11 +8,11 @@ export const DisplayWeather = (props)=> {
   const { data } = props;
   const iconurl =
     "http://openweathermap.org/img/wn/" +
-    `${data.cod != 404 ? data.weather[0].icon : null}` +
+    `${data.cod !== 404 ? data.weather[0].icon : null}` +
     ".png";
   return (
     <div className="displayweather">
-      {data.cod != 404 ? (
+      {data.cod !== 404 ? (
         <React.Fragment>
           <div className="maincard">
             <span className="cardtitle">
